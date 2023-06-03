@@ -1,6 +1,6 @@
 {
   "name": "sinonaz-modal",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "Modal.cjs.js",
   "module": "Modal.esm.js",
   "scripts": {
@@ -8,5 +8,17 @@
   },
   "author": "Isaac Shir",
   "license": "ISC",
-  "description": "Package for modals"
+  "description": "Package for modals",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sinonaz/Modals.git"
+  },
+  "keywords": [
+    "modal",
+    "modals"
+  ],
+  "bugs": {
+    "url": "https://github.com/Sinonaz/Modals/issues"
+  },
+  "homepage": "https://github.com/Sinonaz/Modals#readme"
 }
