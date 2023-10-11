@@ -1,6 +1,6 @@
 {
   "name": "sinonaz-modal",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "Modal.cjs.js",
   "module": "Modal.esm.js",
   "scripts": {
