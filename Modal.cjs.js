@@ -1,8 +1,7 @@
 class Modal {
   constructor() {
     this.openButtonElements = document.querySelectorAll(`[data-open-target]`);
-    this.closeButtonElements =
-      document.querySelectorAll(`[data-close-target]`);
+    this.closeButtonElements = document.querySelectorAll(`[data-close-target]`);
     this.onOpenButtonClick = this.onOpenButtonClick.bind(this);
     this.onCloseButtonClick = this.onCloseButtonClick.bind(this);
     this.onDocumentClick = this.onDocumentClick.bind(this);
@@ -15,6 +14,7 @@ class Modal {
     modalElement.dataset.isModalOpen = `false`;
 
     this._removeDocumentListeners();
+    document.body.style.overflow = ``;
   }
 
   _showModal(modalElement) {
@@ -23,13 +23,12 @@ class Modal {
     modalElement.dataset.isModalOpen = `true`;
 
     this._addDocumentListeners();
+    document.body.style.overflow = `hidden`;
   }
 
   onKeyboardPress(evt) {
     if (evt.code === `Escape`) {
-      this.modalElement = document.querySelector(
-        `[data-is-modal-open="true"]`
-      );
+      this.modalElement = document.querySelector(`[data-is-modal-open="true"]`);
 
       this._hideModal(this.modalElement);
     }
@@ -55,9 +54,7 @@ class Modal {
     const self = evt.currentTarget;
 
     if (self.dataset.openTarget) {
-      this.modalElement = document.querySelector(
-        `.${self.dataset.openTarget}`
-      );
+      this.modalElement = document.querySelector(`.${self.dataset.openTarget}`);
 
       try {
         this._showModal(this.modalElement);

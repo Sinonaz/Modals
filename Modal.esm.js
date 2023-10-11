@@ -14,6 +14,8 @@ class Modal {
     modalElement.dataset.isModalOpen = `false`;
 
     this._removeDocumentListeners();
+
+    document.body.style.overflow = ``;
   }
 
   _showModal(modalElement) {
@@ -22,6 +24,8 @@ class Modal {
     modalElement.dataset.isModalOpen = `true`;
 
     this._addDocumentListeners();
+
+    document.body.style.overflow = `hidden`;
   }
 
   onKeyboardPress(evt) {
